@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="styyle.css"><link>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" ype="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.">
+<link rel="manifest" href="/site.webmanifest">
+   
+   <link rlink rel="icon" type="image/x-icon" href="favicon.ico">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+  ul li a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #111;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: neonColor 4s infinite linear;
+  text-shadow:
+    0 0 5px #00e6ff,
+    0 0 10px #00e6ff,
+    0 0 20px #00e6ff;
+}
+
+
+ul li a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: skewX(-25deg);
+}
+
+
+ul li a:hover {
+  transform: scale(1.3);
+  box-shadow:
+    0 0 20px currentColor,
+    0 0 30px currentColor;
+}
+
+ul li a:hover::before {
+  left: 125%;
+  transition: left 0.85s ease-in-out;
+}
+
+
+@keyframes neonColor{
+  0% {
+    color: #00e6ff;
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff, 0 0 40px #00e6ff;
+  }
+  25% {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  }
+  50% {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+  }
+  75% {
+    color: #ffff33;
+    text-shadow: 0 0 10px #ffff33, 0 0 20px #ffff33, 0 0 40px #ffff33;
+  }
+  100% {
+    color: #00e6ff;
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff, 0 0 40px #00e6ff;
+  }
+}
+
+
+
+.logo a{
+  pa
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  animation: colorShift 3s infinite linear;
+  text-shadow:
+    0 0 10px #00e6ff,
+    0 0 20px #00e6ff,
+    0 0 40px #00e6ff;
+}
+
+@keyframes colorShift {
+  0% {
+    color: #00e6ff;
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff, 0 0 40px #00e6ff;
+  }
+  25% {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  }
+  50% {
+    color: #00ff99;
+    text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99, 0 0 40px #00ff99;
+  }
+  75% {
+    color: #ffff33;
+    text-shadow: 0 0 10px #ffff33, 0 0 20px #ffff33, 0 0 40px #ffff33;
+  }
+  100% {
+    color: #00e6ff;
+    text-shadow: 0 0 10px #00e6ff, 0 0 20px #00e6ff, 0 0 40px #00e6ff;
+  }
+}
+ 
+
+
+
+
+
+
+
+
+ .HOME-text a{
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 20px; /* زودنا النعومة */
+  background: linear-gradient(45deg, #ff0057, #ff7b00, #00ffae, #00aaff);
+  background-size: 400%;
+  animation: glowMove 6s linear infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #ff0057, 0 0 20px #ff7b00; /* قللنا التوهج */
+}
+
+
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.HOME-text a:hover {
+  transform: scale(1.15) rotate(1deg);
+  box-shadow: 0 0 20px #ff0057, 0 0 40px #ff7b00, 0 0 60px #00ffae;
+  filter: brightness(1.25);
+}
+
+
+.HOME-text a::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, #ff0057, #ff7b00, #ffea00, #00ffae);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(8px); 
+  opacity: 0.6; 
+  animation: fireGlow 3s linear infinite;
+  border-radius: 22px; 
+}
+
+
+@keyframes fireGlow {
+  0% { background-position: 0% 50%; transform: scale(1); }
+  50% { background-position: 100% 50%; transform: scale(1.1); }
+  100% { background-position: 0% 50%; transform: scale(1); }
+}
+
+
+.HOME-text a:active {
+  transform: scale(0.92);
+  filter: brightness(1.4);
+}
+
+
+
+@keyframes crazyMove {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  15%  { transform: translateY(-6px) rotate(-4deg) scale(1.1); }
+  30%  { transform: translateY(4px) rotate(3deg) scale(0.95); }
+  45%  { transform: translateY(0) rotate(0deg) scale(1.05); }
+  60%  { transform: translateY(-5px) rotate(2deg) scale(1.08); }
+  75%  { transform: translateY(3px) rotate(-3deg) scale(0.98); }
+  100% { transform: translateY(0) rotate(0deg) scale(1); }
+}
+
+@keyframes neonPulse {
+  0%   { box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), 0 0 30px rgba(255, 0, 255, 0.3); }
+  50%  { box-shadow: 0 0 35px rgba(255, 0, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.5); }
+  100% { box-shadow: 0 0 15px rgba(0, 255, 255, 0.3), 0 0 30px rgba(255, 0, 255, 0.3); }
+}
+
+
+@keyframes shine {
+  0% { background-position: -200%; }
+  100% { background-position: 200%; }
+}
+
+.icon {
+  animation: crazyMove 5s ease-in-out infinite, neonPulse 3s ease-in-out infinite;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #111, #222);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.25), transparent);
+  background-size: 200%;
+  animation: shine 4s linear infinite;
+}
+
+
+.icon:hover {
+  transform: scale(1.25) rotate(12deg);
+  box-shadow: 0 0 80px rgba(255, 0, 255, 0.9), 0 0 120px rgba(0, 255, 255, 0.8);
+  background: linear-gradient(145deg, #00c6ff, #ff00cc);
+  transition: all 0.3s ease;
+}
+
+.icon:hover img {
+  transform: rotate(720deg) scale(1.3);
+  filter: brightness(1.6) drop-shadow();
+  transition: all 1s ease;
+}
+
+
+
+
+
+
+
+
+#GALLARY {
+  background: #fff;
+  border-radius: 30px;
+  padding: 60px 0;
+  position: relative;
+  overflow: visible;
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.08),
+    inset 0 4px 8px rgba(255, 255, 255, 0.6),
+    inset 0 -4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.item {
+  float: left;
+  margin: 1%;
+  width: 31%;
+  border-radius: 20px;
+  overflow: visible;
+  transition: all 0.6s ease;
+  position: relative;
+  z-index: 1;
+  animation: softShake 4s infinite ease-in-out; 
+  box-shadow: 0 0 25px 5px #ff00ff;
+  animation: colorShadow 4s linear infinite, softShake 5s ease-in-out infinite; 
+}
+
+.item img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  transition: all 0.6s ease;
+  transform-origin: center center;
+}
+
+.item:hover {
+  z-index: 10;
+  transform: translateY(-50px);
+}
+
+.item:hover img {
+  transform: rotate(-2deg);
+  filter: brightness(1.3) saturate(1.4);
+}
+
+.row-x:hover .item {
+  opacity: 0.6;
+  filter: blur(2px);
+  transform: scale(0.97);
+  transition: all 0.5s ease;
+}
+
+.row-x:hover .item:hover {
+  opacity: 1;
+  filter: none;
+  transform: translateY(-50px) rotate(-2deg);
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffcc);
+  background-size: 300%;
+  opacity: 0;
+  filter: blur(20px);
+  transition: opacity 0.5s ease;
+  z-index: -1;
+}
+
+.item:hover::before {
+  opacity: 1;
+  animation: neonMove 2s linear infinite;
+}
+
+@keyframes neonMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes softShake {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25% { transform: translateY(-3px) rotate(0.5deg); }
+  50% { transform: translateY(2px) rotate(-0.5deg); }
+  75% { transform: translateY(-2px) rotate(0.3deg); }
+}
+@keyframes colorShadow {
+  0% { box-shadow: 0 0 25px 5px #ff00ff; }
+  25% { box-shadow: 0 0 25px 5px #00ffff; }
+  50% { box-shadow: 0 0 25px 5px #00ffcc; }
+  75% { box-shadow: 0 0 25px 5px #ff9900; }
+  100% { box-shadow: 0 0 25px 5px #ff00ff; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.formm button{
+  position: relative;
+  display: inline-block;
+  padding: 15px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 20px; 
+  background: linear-gradient(45deg, #ff0057, #ff7b00, #00ffae, #00aaff);
+  background-size: 400%;
+  animation: glowMove 6s linear infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #ff0057, 0 0 20px #ff7b00; 
+}
+
+@keyframes glowMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.formm button:hover {
+  transform: scale(1.15) rotate(1deg);
+  box-shadow: 0 0 20px #ff0057, 0 0 40px #ff7b00, 0 0 60px #00ffae;
+  filter: brightness(1.25);
+}
+
+.formm button::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(45deg, #ff0057, #ff7b00, #ffea00, #00ffae);
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(8px); 
+  opacity: 0.6;  
+  animation: fireGlow 3s linear infinite;
+  border-radius: 22px; 
+}
+
+@keyframes fireGlow {
+  0% { background-position: 0% 50%; transform: scale(1); }
+  50% { background-position: 100% 50%; transform: scale(1.1); }
+  100% { background-position: 0% 50%; transform: scale(1); }
+}
+
+.formm button:active {
+  transform: scale(0.92);
+  filter: brightness(1.4);
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+    <header>
+<div class="nav">
+  <div class="coninire">
+            <div class="logo">
+         <a href="">WE SCHOOL</a>
+      </div><!---end logo-->
+   <div class="min-nav">
+      <ul class="animate__animated animate__zoomIn">
+<li><a href="#">HOME</a></li>
+<li><a href="#">ABOUT</a></li>
+<li><a href="#">ICIONS</a></li>
+<li><a href="#">GALLARY</a></li>
+<li><a href="#">CONTACT US</a></li>
+      </ul>
+          </div><!---end min-nav-->
+          <div class="clr"></div>
+     </div><!---end coniner-->
+</div><!--end-nav-->
+<div class="HOME-text">
+   
+<h1>STRICT</h1>
+<hr>
+<P>STRICT is a responsive theme with a chean and minimal look</P>
+
+<br>
+<a href="#" class="fire-link">call to action</a>
+</div><!---end HOME-text-->
+    
+    </header>
+    <div class="desiin">
+             <div class="container------2">
+         <h2>
+      Simple & pure design..
+     </h2>
+    <br><br>
+    <p>
+     Designers everywhere gush with admiration upon seeing a web design and exclaim "its beautiful, it's so clean!". There are a 
+     <p>countless number of webdesign round-ups dedicated to 'clean' design and it is a term thrown around quite a bit in the web </p>
+    </p>
+    <p>design community. It can be easy to spot a good example of clean design.</p>
+
+
+       </div><!----end container-->
+     </div><!----end disin-->
+     
+
+     
+     <section id="ICIONS">
+       <div class="container">
+            <div class="row">
+         <div class="icon">
+<img src="icon1.jpg" alt="">
+    <h3>Optimized for all devices</h3>
+    <p>
+      STRICT has been designed to be fully
+      
+    </p>
+    <p>responsive on all device</p>
+
+  </div>  <!-----end icon-->
+   <div class="icon">
+<img src="icon2.jpg" alt="">
+    <h3>Clean & Minimal Design</h3>
+    <p>
+      This multipurpose theme is especially created 
+      
+    </p>
+    <p>to be used for different projects.</p>
+
+  </div>  <!-----end icon-->
+    <div class="icon">
+<img src="icon3.jpg" alt="">
+    <h3>Font Awesome Icon</h3>
+    <p>
+     This multipurpose theme is especially created
+      
+    </p>
+    <p> to be used for different projects</p>
+
+  </div>  <!-----end icon-->
+</div><!-----end row-->
+<div style="clear: both;"></div>
+       </div><!-----end container--> 
+     </section>
+<script>
+  const icons = document.querySelectorAll('.icon');
+  icons.forEach(icon => {
+    icon.addEventListener('click', () => {
+      icons.forEach(i => i.classList.remove('active'));
+      icon.classList.add('active');
+    });
+  });
+</script>
+
+
+<!--**************************************************** -->
+   <section id="GALLARY">
+ <div class="container">
+ <div class="info">
+<h2>
+  Showcase your work like a pro.
+</h2>
+<p>Contact me if wolny wurk</p>
+ </div> <!-----end info-->
+ <div class="row-x">
+    <div class="item">
+        <img src="image1.jpg" alt="">
+
+    </div>
+    <div class="item">
+        <img src="image2.jpg" alt="">
+
+    </div>
+    <div class="item">
+        <img src="image3.jpg" alt="">
+
+    </div>
+    <div class="item">
+        <img src="image4.jpg" alt="">
+
+    </div>
+    <div class="item">
+        <img src="image5.jpg" alt="">
+
+    </div>
+    <div class="item">
+        <img src="image6.jpg" alt="">
+
+    </div>
+ </div> <!-----end row-x-->
+ <div style="clear: both;">
+
+ </div>
+</div> <!-----end container-->
+   </section>
+
+<section class="contact">
+<div class="contttaiiner">
+  <div class="lay">
+<div class="textttttttt">
+  <h1>stay with us</h1>
+  <p>we ensure & suppor</p>
+</div>
+  <div class="formmm">
+ <center>
+            <table>
+                <form action="">
+                  
+                    
+                    <tr>
+                        <td>
+                            <input class="vv" type="text" id="name" name="name"placeholder="Your Name">
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            <input type="email" class="vv" name="email" id="email"placeholder="email address">
+                        </td>
+                    </tr>
+                    
+                   
+                    
+                    <tr>
+                        <td>
+                            <textarea placeholder=" Message" name="txt" id="txt" ></textarea>
+                        </td>
+                    </tr>
+                   
+                    <tr>
+                        <td>
+                            <input type ="checkbox" name="lolo" id="lolo"cl >
+                            <span class="lolo">Join your newsletters</span>
+                            <button>send</button>
+                        </td>
+                    </tr>
+               
+
+
+                </form>
+            </table>
+        </center>
+
+</div>
+</div>
+<div style="clear: both;"></div>
+</div>
+</section>
+
+
+<footer class="footer">
+<div class="contttainer">
+  <div class="socil">
+  <a href=""><i class="fa-brands fa-facebook"></i></a>
+  <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+  <a href=""><i class="fa-brands fa-square-google-plus"></i></a>
+  <a href=""><i class="fa-brands fa-linkedin"></i></a>
+</div>
+<div class="coby">
+  coby rights2014/STRIC
+</div>
+<div style="clear: both;"></div>
+</div>
+</footer>
+
+
+      
+
+
+      
+
+</body>
+</html>
